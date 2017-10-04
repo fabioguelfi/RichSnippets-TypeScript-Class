@@ -8,6 +8,7 @@ class RichSnippet implements iRichSnippets {
     private $urlSelf;
 
     private $nameClient;
+    private $domainClient;
     private $email;
     private $author;
     private $image;
@@ -24,7 +25,7 @@ class RichSnippet implements iRichSnippets {
     private $linkTwitter;
     private $openingHours;
     private $geoLongitude;
-    private $geolatitude;
+    private $geoLatitude;
     private $keywords;
 
     public function __construct(){
@@ -32,19 +33,19 @@ class RichSnippet implements iRichSnippets {
      }
 
     public function raiting(){
-        //To Do return rand()
+        return rand(3, 4).'.'.rand(0, 9);
     }
 
     public function comments(){
-        //To Do return   
+        return rand(30, 60);
     }
 
     public function createTime(){
-        //To Do return
-    }
+        return date("d/m/Y");
+}
 
     public function urlSelf(){
-        //To Do return
+        return end(explode("/", $_SERVER['PHP_SELF']));
     }
 
     public function getNameClient () {
@@ -52,6 +53,13 @@ class RichSnippet implements iRichSnippets {
     }
     public function setNameClient ($n) {
         return $this->nameClient = $n;
+    }
+
+    public function getDomainClient(){
+        return $this->domainClient;
+    }
+    public function setDomainClient($d){
+        return $this->domainClient = $d;
     }
 
     public function getEmail(){
