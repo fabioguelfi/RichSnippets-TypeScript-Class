@@ -1,13 +1,15 @@
 class RichSnippet {
+
+    private _raiting: number
+    private _comments: number
+    private _createTime: number
+    private _urlSelf: string
+
     private _nameClient: string
     private _email: string
     private _author: string
     private _image: string
     private _logo: string
-    private _raiting: number
-    private _comments: number
-    private _createTime: number
-    private _urlSelf: string
     private _phone: number
     private _description: string
     private _address: string
